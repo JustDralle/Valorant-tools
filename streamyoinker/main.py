@@ -8,7 +8,7 @@ seenMatches = []
 
 print('Valorant Stream Yoinker by deadly forked by dralle https://github.com/JustDralle/valorant-stream-yoinker-modified')
 
-with open('C:\\Users\\dehod\\Desktop\\Valorant-tools\\agentYoinker\\settings.json', 'r') as f:
+with open('C:\\Users\\dehod\\Desktop\\Valorant-tools\\streamyoinker\\settings.json', 'r') as f:
     data = json.load(f)
     ranBefore = data['ran']
     region = data['region']
@@ -23,7 +23,7 @@ if not ranBefore:
     client = Client(region=region)
     client.activate()
 
-    with open('C:\\Users\\dehod\\Desktop\\Valorant-tools\\agentYoinker\\settings.json', 'w') as f:
+    with open('C:\\Users\\dehod\\Desktop\\Valorant-tools\\streamyoinker\\settings.json', 'w') as f:
         data['ran'] = True
         data['region'] = region
         json.dump(data, f, indent=4)
