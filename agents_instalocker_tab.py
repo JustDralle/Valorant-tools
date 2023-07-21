@@ -18,14 +18,14 @@ class StreamerYoinkerTab(tk.Frame):
             output_text.delete(1.0, tk.END)
 
             # Read the contents of the settings.json file
-            with open('C:\\Users\\dehod\\Desktop\\Valorant-tools\\agentYoinker\\settings.json', 'r') as f:
+            with open('settings.json', 'r') as f:
                 contents = f.read()
                 print(contents)
 
             # Execute the Valorant Stream Yoinker script in a separate thread
             def run_script():
                 try:
-                    subprocess.run(['python', 'C:\\Users\\dehod\\Desktop\\Valorant-tools\\agentYoinker\\main.py'],
+                    subprocess.run(['python', 'main.py'],
                                    capture_output=True, text=True, check=True, shell=True)
                 except subprocess.CalledProcessError as e:
                     output_text.insert(tk.END, f"An error occurred: {e.stderr}")
